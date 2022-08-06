@@ -9,3 +9,4 @@ sudo pacman -S glibc
 sudo sed -i "s%#ja_JP.UTF-8 UTF-8%ja_JP.UTF-8 UTF-8%" /etc/locale.gen
 sudo locale-gen
 sudo steamos-readonly enable
+echo "Done! Be sure to put `LANG=ja_JP.UTF-8 %command%` in the game's startup options on Steam to enable the locale."
