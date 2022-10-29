@@ -28,9 +28,9 @@ sudo pacman -S systemsettings
 sudo pacman -S ark
 # 重新安裝: 音效管理
 sudo pacman -S pavucontrol
-# 重新安裝所有程式
-sudo pacman -Qqn | sudo pacman -S -
+# 重新安裝：截圖工具
+sudo pacman -S spectacle
 # 復原唯讀模式
 sudo steamos-readonly enable
 # 完成提示語
-echo "完成！請重新開機套用修改"
+echo "完成！請重新開機套用修改！"
