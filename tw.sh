@@ -32,3 +32,5 @@ sudo pacman -S pavucontrol
 sudo pacman -Qqn | sudo pacman -S -
 # 復原唯讀模式
 sudo steamos-readonly enable
+# 完成提示語
+echo "完成！請重新開機套用修改"
