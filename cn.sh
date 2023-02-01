@@ -16,7 +16,7 @@ sudo pacman -S ki18n --noconfirm
 sudo pacman -S plasma --noconfirm
 # 重新安裝所有程式
 sudo pacman -Qq > packages.txt
-sudo pacman -S accountsservice --noconfirm	for pkgName in $(cat /home/deck/packages.txt)
+sudo pacman -S accountsservice --noconfirm	for pkgName in $(cat ../packages.txt)
 sudo pacman -S acl --noconfirm	do
 sudo pacman -S adobe-source-code-pro-fonts --noconfirm	  sudo pacman -S $pkgName --noconfirm
 sudo pacman -S adwaita-icon-theme --noconfirm	done
