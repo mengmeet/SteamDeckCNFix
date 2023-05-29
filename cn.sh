@@ -28,7 +28,11 @@ pacman -S plasma --noconfirm
 pacman -Qq > packages.txt
 for pkgName in $(cat ./packages.txt)
 do
-  pacman -S $pkgName --noconfirm
+  # 获取软件包的版本号
+  version=$(pacman -Q "$pkgName" | awk '{print $2}')
+
+  # 重新安装指定版本的软件包
+  pacman -S "$pkgName=$version" --noconfirm
 done
 # 完成提示語
 echo "汉化完成！请重新启动以应用修改！"
