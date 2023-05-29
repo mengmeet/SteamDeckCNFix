@@ -1,4 +1,14 @@
 #!/bin/bash
+
+# 检查是否以管理员身份运行
+if [ "$(id -u)" != "0" ]; then
+    echo "脚本需要以管理员身份运行！"
+
+    # 使用sudo重新运行脚本
+    sudo "$0" "$@"
+    exit $?
+fi
+
 # 安装 rwfus
 cd /tmp
 git clone https://github.com/ValShaped/rwfus.git
