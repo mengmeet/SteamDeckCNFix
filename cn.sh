@@ -35,6 +35,6 @@ do
   pacman -S "$pkgName=$version" --noconfirm
 done
 # 安全fcitx5输入法
-sudo pacman -Sy fcitx5 fcitx5-rime
+sudo pacman -Sy fcitx5 fcitx5-rime --noconfirm
 # 完成提示語
 echo "汉化完成！请重新启动以应用修改！"
