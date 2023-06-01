@@ -20,7 +20,7 @@ pacman -S glibc --noconfirm
 # 編輯 locale.gen
 sed -i "s%#zh_CN.UTF-8 UTF-8%zh_CN.UTF-8 UTF-8%" /etc/locale.gen
 # 生成语言
-locale-gen
+locale-gen  zh_CN zh_CN.UTF-8 zh_TW.UTF-8 ja_JP.UTF-8 en_US.UTF-8
 # 安裝程式: kde翻译组件、plasma
 pacman -S ki18n --noconfirm
 pacman -S plasma --noconfirm
@@ -34,5 +34,7 @@ do
   # 重新安装指定版本的软件包
   pacman -S "$pkgName=$version" --noconfirm
 done
+# 安全fcitx5输入法
+sudo pacman -Sy fcitx5 fcitx5-rime
 # 完成提示語
 echo "汉化完成！请重新启动以应用修改！"
