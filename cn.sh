@@ -25,16 +25,12 @@ locale-gen  zh_CN zh_CN.UTF-8 zh_TW.UTF-8 ja_JP.UTF-8 en_US.UTF-8
 pacman -S ki18n --noconfirm
 pacman -S plasma --noconfirm
 # 重新安裝所有程式
-pacman -Qq > packages.txt
+pacman -Q|sed 's/ /=/'>packages.txt
 for pkgName in $(cat ./packages.txt)
 do
-  # 获取软件包的版本号
-  version=$(pacman -Q "$pkgName" | awk '{print $2}')
-
-  # 重新安装指定版本的软件包
-  pacman -S "$pkgName=$version" --noconfirm
+	pacman -S "$pkgName" --noconfirm
 done
-# 安全fcitx5输入法
+# 安装fcitx5输入法
 sudo pacman -Sy fcitx5 fcitx5-rime --noconfirm
 # 完成提示語
 echo "汉化完成！请重新启动以应用修改！"
